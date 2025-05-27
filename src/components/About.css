@@ -1,0 +1,314 @@
+.about-section {
+  padding-top: 100px;
+  background-color: #0a0e17; /* Darker background */
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Changed from 3fr 2fr to 1fr for full width */
+  gap: 2rem;
+  align-items: start;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.about-text {
+  width: 100%;
+}
+
+.skills-highlights-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Adjusted to give highlights more width (60%) and skills less (40%) */
+  gap: 2rem;
+  width: 100%;
+}
+
+.image-text-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: #a2aabc; /* Lighter gray for text */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-text p:hover {
+  color: #ccd6f6;
+  transform: translateX(5px);
+}
+
+.skills {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(25, 37, 60, 0.7); /* Lighter dark blue background for better visibility */
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.skills:hover {
+  transform: translateY(-5px);
+}
+
+.skills h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #e6f1ff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.skills h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, transparent);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  position: relative;
+  padding: 8px 0;
+  color: #a2aabc;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.skills-list li:hover {
+  color: #64ffda;
+  transform: translateX(5px);
+}
+
+/* Remove the previous ::before pseudo-element */
+.skills-list li::before {
+  content: none;
+}
+
+/* Skill category styling */
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+
+.skill-category h4 {
+  font-size: 1.1rem;
+  color: #64ffda;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  padding-bottom: 5px;
+}
+
+/* Star rating styling */
+.skill-rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  color: rgba(100, 255, 218, 0.3);
+  font-size: 1rem;
+  margin-left: 2px;
+  transition: all 0.3s ease;
+}
+
+.star.filled {
+  color: #64ffda;
+}
+
+/* Resume highlights styling */
+.resume-highlights {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(25, 37, 60, 0.7); /* Matching the skills section background */
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.resume-highlights:hover {
+  transform: translateY(-5px);
+}
+
+.resume-highlights h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #e6f1ff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.resume-highlights h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, transparent);
+}
+
+/* Highlight category styling to match skill categories */
+.highlight-category {
+  margin-bottom: 1.5rem;
+}
+
+.highlight-category h4 {
+  font-size: 1.1rem;
+  color: #64ffda;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  padding-bottom: 5px;
+}
+
+.resume-highlights ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.highlight-item {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 25px;
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.highlight-item:nth-child(1) { animation-delay: 0.1s; }
+.highlight-item:nth-child(2) { animation-delay: 0.3s; }
+.highlight-item:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.highlight-item::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+.highlight-title {
+  color: #64ffda;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #a2aabc;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: all 0.3s ease;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #64ffda;
+  border-radius: 8px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-7px);
+}
+
+.image-container:hover::after {
+  top: 5px;
+  left: 5px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: grayscale(100%); /* Make image black and white */
+  transition: all 0.4s ease;
+}
+
+.image-container:hover img {
+  filter: grayscale(0%); /* Remove grayscale on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .image-text-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .resume-highlights ul {
+    flex-direction: column; /* Stack vertically on mobile */
+  }
+  
+  .skills-highlights-container {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+}

@@ -1,0 +1,134 @@
+.resume-section {
+  padding-top: 100px;
+}
+
+.resume-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+}
+
+.resume-viewer {
+  width: 100%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 25, 47, 0.8);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.resume-highlights {
+  margin-top: 2rem;
+}
+
+.resume-highlights h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.resume-highlights ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.resume-highlights li {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.resume-highlights li:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.highlight-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.highlight-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.resume-highlights p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .resume-viewer {
+    height: 500px;
+  }
+  
+  .resume-highlights ul {
+    grid-template-columns: 1fr;
+  }
+}
