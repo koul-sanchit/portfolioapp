@@ -27,7 +27,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
         <div className="logo">
-          <Link to="about" smooth={true} duration={500}>Sanchit Koul</Link>
+          <Link to="about" smooth={true} duration={500}>Sanchit Koul, SDE</Link>
         </div>
 
         <div className={`menu-toggle ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
@@ -50,6 +50,7 @@ const Header = () => {
                 About
               </Link>
             </li>
+            
             <li>
               <Link 
                 activeClass="active" 
@@ -60,6 +61,18 @@ const Header = () => {
                 onClick={() => setMenuOpen(false)}
               >
                 Projects
+              </Link>
+            </li>
+            <li>
+              <Link 
+                activeClass="active" 
+                to="codeforces" 
+                spy={true} 
+                smooth={true} 
+                duration={500}
+                onClick={() => setMenuOpen(false)}
+              >
+                Codeforces
               </Link>
             </li>
             <li>

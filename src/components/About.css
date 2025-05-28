@@ -27,6 +27,25 @@
   width: 100%;
 }
 
+/* Ensure equal height for resume highlights and skills containers */
+.skills, .resume-highlights {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(25, 37, 60, 0.7);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.skills:hover, .resume-highlights:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -15px rgba(100, 255, 218, 0.3);
+}
+
 .image-text-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -53,20 +72,6 @@
   transform: translateX(5px);
 }
 
-.skills {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: rgba(25, 37, 60, 0.7); /* Lighter dark blue background for better visibility */
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-  transition: transform 0.3s ease;
-  width: 100%;
-}
-
-.skills:hover {
-  transform: translateY(-5px);
-}
-
 .skills h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -76,12 +81,12 @@
   padding-bottom: 0.5rem;
 }
 
-.skills h3::after {
+.skills h3::after, .resume-highlights h3::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
+  width: 100px;  /* Fixed width instead of percentage */
   height: 2px;
   background: linear-gradient(90deg, #64ffda, transparent);
 }
@@ -173,7 +178,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
+  width: 100px;  /* Fixed width instead of percentage */
   height: 2px;
   background: linear-gradient(90deg, #64ffda, transparent);
 }
@@ -241,6 +246,25 @@
   margin: 0.2rem 0;
   font-size: 0.95rem;
   color: #a2aabc;
+}
+
+/* Style for the list items in the experience section */
+.highlight-item ul {
+  margin-top: 0.5rem;
+}
+
+.highlight-item ul li {
+  color: #a2aabc; /* Match the color of other text */
+  font-size: 0.95rem; /* Slightly smaller font size */
+  line-height: 1.6;
+  margin-bottom: 0.7rem;
+  transition: all 0.3s ease;
+  padding-left: 5px;
+}
+
+.highlight-item ul li:hover {
+  color: #ccd6f6; /* Matches the hover color in the about-text p:hover */
+  transform: translateX(5px); /* Same transform as about-text p:hover */
 }
 
 .about-image {

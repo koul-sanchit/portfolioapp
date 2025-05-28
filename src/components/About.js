@@ -63,21 +63,21 @@ const About = () => {
                 <h4>Experience</h4>
                 <div className="highlight-item">
                   <p>Advanced Software Engineer, <br></br><b>Honeywell</b> (Dec 2024 - Present)</p>
-                  <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                  <ul>
                     <li>Integrated GenAI to existing platforms using LangChain to achieve project level code generation, coverity security fixes, no code browser automation, and report analysis.</li>
                     <li>Test Platform: Created a centeralized portal for devs & testers to onboard their containerized test automations and trigger, schedule and run tests in AKS on demand along with detailed AI generated report summary & analysis, thus helping in Cycle Time Reduction.</li>
                   </ul>
                 </div>
                 <div className="highlight-item">
                   <p>Software Engineer II, <br></br><b>Honeywell</b> (July 2022 - Dec 2024)</p>
-                  <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                  <ul>
                     <li>AutoMate: A CI/CD portal for users to create their pipelines ensuring secure commit to release creation involving build, scans & deployment. Worked on developing the portal, supporting multiple migrations (BitBucket to GitHub, Bamboo to GitHub Actions, etc), access control, and build Bring Your Own Cluster (BYOC) utility.</li>
                     <li>API Automation Tool: Created a portal from scratch that takes swagger.json as input along with API tokens and request data for the available endpoints and generates a .Net Gherkins Test Project. Portal provides support to run and schedule the generated tests.</li>
                   </ul>
                 </div>
                 <div className="highlight-item">
                   <p>Software Engineering Intern, <br></br><b>Honeywell</b> (June - July 2021)</p>
-                  <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                  <ul>
                     <li>Worked on the backend and database of a track and trace supply chain application. Built a GoLang microservice to handle client requests, exposing RESTful APIs for retrieving and storing data with support for flexible query filters. Focused on clean architecture, maintainable code, and proper error handling.</li>
                   </ul>
                 </div>

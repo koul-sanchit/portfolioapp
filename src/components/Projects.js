@@ -8,31 +8,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      shortDescription: 'A full-stack e-commerce solution with React and Node.js',
+      title: 'AutoMate - CI/CD Portal',
+      shortDescription: 'A portal for users to kickstart their CI/CD pipelines',
       fullDescription: 'This project is a complete e-commerce platform built with React for the frontend and Node.js/Express for the backend. It features user authentication, product catalog, shopping cart, payment integration with Stripe, and an admin dashboard for product management.',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Stripe API'],
-      image: '/project1.jpg',
+      technologies: ['.NET', 'CAKE', 'Ansible', 'PostgreSQL', 'Razor Pages', 'Entity Framework', 'Docker', 'AKS'],
+      image: '/am.png',
       link: 'https://github.com/yourusername/project1',
       liveDemo: 'https://project1-demo.com'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      shortDescription: 'A drag-and-drop task management application',
+      title: 'Test Platform',
+      shortDescription: 'A centeralized platform for managing and executing containerized tests in AKS',
       fullDescription: 'A responsive task management application that allows users to organize their tasks using a Kanban-style board. Features include drag-and-drop functionality, task prioritization, due dates, labels, and team collaboration capabilities.',
       technologies: ['React', 'TypeScript', 'react-beautiful-dnd', 'Firebase', 'Material UI'],
-      image: '/project2.jpg',
+      image: '/tp.png',
       link: 'https://github.com/yourusername/project2',
       liveDemo: 'https://project2-demo.com'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      shortDescription: 'Real-time weather forecasting with interactive maps',
+      title: 'API Automation Tool',
+      shortDescription: 'A portal to generate automated API Automation scripts using Swagger input',
       fullDescription: 'An interactive weather dashboard that provides real-time weather information and forecasts for locations worldwide. The app features interactive maps, graphical data representation, severe weather alerts, and location-based suggestions.',
       technologies: ['React', 'Chart.js', 'OpenWeather API', 'Mapbox', 'CSS Grid'],
-      image: '/project3.jpg',
+      image: '/apiauto.png',
       link: 'https://github.com/yourusername/project3',
       liveDemo: 'https://project3-demo.com'
     }
@@ -59,7 +59,7 @@ const Projects = () => {
               onClick={() => toggleProject(project.id)}
             >
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <img src={`${process.env.PUBLIC_URL}${project.image}`} alt={project.title} />
                 <div className="project-overlay">
                   <span>View Details</span>
                 </div>
@@ -81,16 +81,16 @@ const Projects = () => {
                     </ul>
                   </div>
                   
-                  <div className="project-links">
+                  {/* <div className="project-links">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      <button>Source Code</button>
+                      <button disabled>Source Code</button>
                     </a>
                     {project.liveDemo && (
                       <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                        <button>Live Demo</button>
+                        <button disabled>Live Demo</button>
                       </a>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

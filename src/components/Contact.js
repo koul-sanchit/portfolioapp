@@ -109,7 +109,7 @@ const Contact = () => {
                 />
               </div>
               
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -119,7 +119,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
-              </div>
+              </div> */}
               
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>

@@ -1,0 +1,223 @@
+.codeforces-section {
+  padding-top: 100px;
+  background-color: #0a0e17;
+}
+
+.codeforces-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.codeforces-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Metrics Container */
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.metric {
+  background-color: rgba(25, 37, 60, 0.7);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -15px rgba(100, 255, 218, 0.3);
+}
+
+.metric h3 {
+  color: #64ffda;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.metric h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, transparent);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e6f1ff;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+  transition: all 0.3s ease;
+}
+
+.metric:hover .metric-value {
+  color: #64ffda;
+}
+
+/* Rating specific styles */
+.rating-metrics {
+  margin-top: 0;
+}
+
+.rating-card .metric-value {
+  margin-bottom: 0.5rem;
+}
+
+.rating-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.metric:hover .rating-name {
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Charts Container */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+  background-color: rgba(25, 37, 60, 0.7);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.chart-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -15px rgba(100, 255, 218, 0.3);
+}
+
+.chart-wrapper h3 {
+  color: #e6f1ff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.chart-box {
+  height: 300px;
+  position: relative;
+}
+
+/* Rating History Chart */
+.rating-history-container {
+  margin-bottom: 2rem;
+}
+
+.chart-wrapper.rating-history {
+  width: 100%;
+}
+
+.chart-box.rating-chart {
+  height: 400px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.spinner {
+  border: 4px solid rgba(100, 255, 218, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #64ffda;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+  color: #a2aabc;
+  font-size: 1.1rem;
+}
+
+/* Error Message */
+.error-message {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-left: 3px solid #dc2626;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+}
+
+.error-message p {
+  color: #a2aabc;
+  margin-bottom: 0.5rem;
+}
+
+.error-details {
+  font-size: 0.9rem;
+  color: #dc2626;
+  font-family: monospace;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .metrics-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-box.rating-chart {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .metrics-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-box {
+    height: 250px;
+  }
+  
+  .chart-box.rating-chart {
+    height: 300px;
+  }
+}
